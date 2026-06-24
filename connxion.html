@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="controls.js"></script>
+</head>
+<body>
+    <form action="connxion.php" method="post" id="connexion" >
+            <h3>Connexion</h3>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required onblur="vemail(document.getElementById('email'))">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required onblur="vpassword(document.getElementById('password'))">
+            <span hidden id="spanpassword" style="display: none;">utilise un lettre majuscule , un caractère spécial et au moins 8 caractères</span>
+            <br>
+            <input type="submit" value="Login"><br>
+            <span >Don't have an account? <a href="#">Sign Up</a></span>
+        </form>
+        <form action="inscription.php" method="post" id="inscription" hidden  >
+            <h3>Inscription</h3>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required onblur="vname(document.getElementById('name'))">
+                <br>
+                <label for="prenom">First Name:</label>
+                <input type="text" id="prenom" name="prenom" required onblur="vprenom(document.getElementById('prenom'))">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email1" name="email" required onblur="vemail(document.getElementById('email1'))">
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required onblur="vpassword(document.getElementById('password'))">
+                <span hidden id="spanpassword" style="display: none;">utilise un lettre majuscule , un caractère spécial et au moins 8 caractères</span>
+                <br>
+                <input type="submit" value="Sign Up"><br>
+                <span>Do have an account? <a href="#">Login</a></span>
+        </form>
+</body>
+</html>
